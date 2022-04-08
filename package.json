@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "inquirer": "^8.2.2",
+    "jest": "^27.5.1"
+  },
+  "name": "theres-no-i-in-team",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejimenez22/Theres-No-I-In-Team.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejimenez22/Theres-No-I-In-Team/issues"
+  },
+  "homepage": "https://github.com/ejimenez22/Theres-No-I-In-Team#readme"
+}
