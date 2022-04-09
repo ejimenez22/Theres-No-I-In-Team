@@ -24,7 +24,46 @@ const employeeQuestions = [{
     type: 'checkbox',
     name: 'role',
     message: 'What is your employees role?',
-    choices: ['Manager', 'Engineer', 'Intern']
+    choices: ['Manager', 'Engineer', 'Intern'], 
+    validate: managerInput => {
+        if ('Manager') {
+            return managerQ
+        } else {
+           return employeeData
+        }
+    }
+}]
+
+const managerQ = [{
+    type: 'input',
+    name: 'office',
+    message: 'Please enter your office number.'
+},
+{
+    type: 'confirm',
+    name: 'add',
+    message: 'Would you like to add another employee?',
+    default: false,
+    validate: confirmation => {
+        if (confirmation === true) {
+            return {
+                type: 'checkbox',
+                name: 'role',
+                message: 'What is your employees role?',
+                choices: ['Manager', 'Engineer', 'Intern'],
+                validate: engineerInput => {
+                    if ('Engineer') {
+                        return engineerQ()
+                    } else {
+                        return employeeData
+                    }
+                }
+            }
+            
+        } else {
+            return employeeData
+        }
+    }
 }]
 
 function init() {
