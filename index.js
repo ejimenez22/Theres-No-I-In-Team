@@ -40,7 +40,7 @@ function managerQuestions() {
 function mainMenu () {
     inquirer.prompt([
         {
-            type: 'list',
+            type: 'checkbox',
             message: 'Would you like to add more?',
             name: `choice`,
             choices: ["Engineer", "Intern", "I am done"]
