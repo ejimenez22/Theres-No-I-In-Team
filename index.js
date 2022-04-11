@@ -109,10 +109,3 @@ const createHTML = data => {
 }
 
 managerQuestions()
-    .then(mainMenu)
-    .then(employees => {
-        return generateHTML(employees)
-    })
-    .then(portfolio => {
-        return writeToFile(portfolio)
-    })
