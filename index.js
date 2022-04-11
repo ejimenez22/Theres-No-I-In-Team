@@ -1,10 +1,9 @@
 const fs = require('fs')
 const inquirer = require('inquirer')
-const Employee = require('./lib/Employee')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
-const Inter = require('./lib/Intern')
 const Manager = require('./lib/Manager')
+const generateHTML = require('./src/generateHTML')
 
 const employees = [];
 
@@ -99,4 +98,21 @@ function internQuestions() {
     })
 }
 
-managerQuestions();
+const createHTML = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log('Error!')
+        } else {
+            console.log('Your Portfolio is ready!')
+        }
+    })
+}
+
+managerQuestions()
+    .then(mainMenu)
+    .then(employees => {
+        return generateHTML(employees)
+    })
+    .then(portfolio => {
+        return writeToFile(portfolio)
+    })
