@@ -65,7 +65,7 @@ function mainMenu () {
         } else if (response.choice == "Intern") {
             internQuestions()
         } else {
-            createHTML()
+            createHTML("index.html", generateHTML(response))
         }
     })
 }
@@ -98,8 +98,8 @@ function internQuestions() {
     })
 }
 
-const createHTML = data => {
-    fs.writeFile('./dist/index.html', data, err => {
+const createHTML = response => {
+    fs.writeFile('./dist/index.html', response, err => {
         if (err) {
             console.log('Error!')
         } else {

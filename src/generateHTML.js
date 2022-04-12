@@ -1,4 +1,4 @@
-function generateHTML(data) {
+function generateHTML(response) {
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +17,10 @@ function generateHTML(data) {
         </div>
         <div class="message-body">
           <ul>
-              <li>Name:${data.mgrName}</li>
-              <li>ID Number:${data.mgrId}</li>
-              <li>Email:${data.mgrEmail}</li>
-              <li>Office Number:${data.mgrOffice}</li>
+              <li>Name:${response.mgrName}</li>
+              <li>ID Number:${response.mgrId}</li>
+              <li>Email:${response.mgrEmail}</li>
+              <li>Office Number:${response.mgrOffice}</li>
           </ul>
         </div>
       </article>
@@ -31,10 +31,10 @@ function generateHTML(data) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${data.emName}</li>
-                <li>ID Number:${data.emId}</li>
-                <li>Email:${data.emEmail}</li>
-                <li>Github Link:https://github.com/${data.engGithub}</li>
+                <li>Name:${response.emName}</li>
+                <li>ID Number:${response.emId}</li>
+                <li>Email:${response.emEmail}</li>
+                <li>Github Link:https://github.com/${response.engGithub}</li>
             </ul>
         </div>
       </article>
@@ -45,10 +45,10 @@ function generateHTML(data) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${data.emName}</li>
-                <li>ID Number:${data.emId}</li>
-                <li>Email:${data.emEmail}</li>
-                <li>School:${data.intSchool}</li>
+                <li>Name:${response.emName}</li>
+                <li>ID Number:${response.emId}</li>
+                <li>Email:${response.emEmail}</li>
+                <li>School:${response.intSchool}</li>
             </ul>
         </div>
       </article>
