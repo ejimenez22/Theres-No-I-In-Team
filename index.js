@@ -65,7 +65,7 @@ function mainMenu () {
         } else if (response.choice == "Intern") {
             internQuestions()
         } else {
-            createHTML("index.html", generateHTML(response))
+            createHTML(generateHTML(response))
         }
     })
 }
