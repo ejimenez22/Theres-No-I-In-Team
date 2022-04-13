@@ -43,21 +43,6 @@ function mainMenu () {
             message: 'Would you like to add more?',
             name: `choice`,
             choices: ["Engineer", "Intern", "I am done"]
-        },
-        {
-            type: 'input',
-            message: 'What is the employees name?',
-            name: `emName`
-        },
-        {
-            type: 'input',
-            message: 'What is the employees id number?',
-            name: `emId`
-        },
-        {
-            type: 'input',
-            message: "What is the employees email?",
-            name: `emEmail`
         }
     ]).then(response => {
         if (response.choice == "Engineer") {
@@ -76,9 +61,24 @@ function engineerQuestions() {
             type: 'input',
             message: 'What is your github link?',
             name: `engGithub`
+        },      
+        {
+            type: 'input',
+            message: 'What is the employees name?',
+            name: `engName`
+        },
+        {
+            type: 'input',
+            message: 'What is the employees id number?',
+            name: `engId`
+        },
+        {
+            type: 'input',
+            message: "What is the employees email?",
+            name: `engEmail`
         }
     ]).then (response => {
-       const newEngin = new Engineer(response.emName, response.emId, response.emEmail, response.engGithub)
+       const newEngin = new Engineer(response.engName, response.engId, response.engEmail, response.engGithub)
        employees.push(newEngin)
        mainMenu()
     })
@@ -90,9 +90,24 @@ function internQuestions() {
             type: 'input',
             message: 'Please add employees school',
             name: `intSchool`
+        },
+        {
+            type: 'input',
+            message: 'What is the employees name?',
+            name: `intName`
+        },
+        {
+            type: 'input',
+            message: 'What is the employees id number?',
+            name: `intId`
+        },
+        {
+            type: 'input',
+            message: "What is the employees email?",
+            name: `intEmail`
         }
     ]).then (response => {
-        const newIntern = new Intern(response.emName, response.emId, response.emEmail, response.intSchool)
+        const newIntern = new Intern(response.intName, response.intId, response.intEmail, response.intSchool)
         employees.push(newIntern)
         mainMenu()
     })

@@ -31,9 +31,9 @@ function generateHTML(response) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${response.emName}</li>
-                <li>ID Number:${response.emId}</li>
-                <li>Email:${response.emEmail}</li>
+                <li>Name:${response.engName}</li>
+                <li>ID Number:${response.engId}</li>
+                <li>Email:${response.engEmail}</li>
                 <li>Github Link:https://github.com/${response.engGithub}</li>
             </ul>
         </div>
@@ -45,9 +45,9 @@ function generateHTML(response) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${response.emName}</li>
-                <li>ID Number:${response.emId}</li>
-                <li>Email:${response.emEmail}</li>
+                <li>Name:${response.intName}</li>
+                <li>ID Number:${response.intId}</li>
+                <li>Email:${response.intEmail}</li>
                 <li>School:${response.intSchool}</li>
             </ul>
         </div>
