@@ -18,10 +18,10 @@ function generateHTML(employees) {
         </div>
         <div class="message-body">
           <ul>
-              <li>Name:${employees.mgrName}</li>
-              <li>ID Number:${employees.mgrId}</li>
-              <li>Email:${employees.mgrEmail}</li>
-              <li>Office Number:${employees.mgrOffice}</li>
+              <li>Name:${employees[0].name}</li>
+              <li>ID Number:${employees[0].id}</li>
+              <li>Email:${employees[0].email}</li>
+              <li>Office Number:${employees[0].officeNumber}</li>
           </ul>
         </div>
       </article>
@@ -32,10 +32,10 @@ function generateHTML(employees) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${employees.engName}</li>
-                <li>ID Number:${employees.engId}</li>
-                <li>Email:${employees.engEmail}</li>
-                <li>Github Link:https://github.com/${employees.engGithub}</li>
+                <li>Name:${employees[1].name}</li>
+                <li>ID Number:${employees[1].id}</li>
+                <li>Email:${employees[1].email}</li>
+                <li>Github Link:https://github.com/${employees[1].github}</li>
             </ul>
         </div>
       </article>
@@ -46,10 +46,10 @@ function generateHTML(employees) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${employees.intName}</li>
-                <li>ID Number:${employees.intId}</li>
-                <li>Email:${employees.intEmail}</li>
-                <li>School:${employees.intSchool}</li>
+                <li>Name:${employees[2].name}</li>
+                <li>ID Number:${employees[2].id}</li>
+                <li>Email:${employees[2].email}</li>
+                <li>School:${employees[2].school}</li>
             </ul>
         </div>
       </article>
