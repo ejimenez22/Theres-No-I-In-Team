@@ -50,7 +50,8 @@ function mainMenu () {
         } else if (response.choice == "Intern") {
             internQuestions()
         } else {
-            createHTML(generateHTML(response))
+            console.log(employees)
+            createHTML(generateHTML(employees))
         }
     })
 }

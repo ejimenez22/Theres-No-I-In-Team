@@ -1,4 +1,5 @@
-function generateHTML(response) {
+function generateHTML(employees) {
+  console.log(employees)
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +18,10 @@ function generateHTML(response) {
         </div>
         <div class="message-body">
           <ul>
-              <li>Name:${response.mgrName}</li>
-              <li>ID Number:${response.mgrId}</li>
-              <li>Email:${response.mgrEmail}</li>
-              <li>Office Number:${response.mgrOffice}</li>
+              <li>Name:${employees.mgrName}</li>
+              <li>ID Number:${employees.mgrId}</li>
+              <li>Email:${employees.mgrEmail}</li>
+              <li>Office Number:${employees.mgrOffice}</li>
           </ul>
         </div>
       </article>
@@ -31,10 +32,10 @@ function generateHTML(response) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${response.engName}</li>
-                <li>ID Number:${response.engId}</li>
-                <li>Email:${response.engEmail}</li>
-                <li>Github Link:https://github.com/${response.engGithub}</li>
+                <li>Name:${employees.engName}</li>
+                <li>ID Number:${employees.engId}</li>
+                <li>Email:${employees.engEmail}</li>
+                <li>Github Link:https://github.com/${employees.engGithub}</li>
             </ul>
         </div>
       </article>
@@ -45,10 +46,10 @@ function generateHTML(response) {
         </div>
         <div class="message-body">
             <ul>
-                <li>Name:${response.intName}</li>
-                <li>ID Number:${response.intId}</li>
-                <li>Email:${response.intEmail}</li>
-                <li>School:${response.intSchool}</li>
+                <li>Name:${employees.intName}</li>
+                <li>ID Number:${employees.intId}</li>
+                <li>Email:${employees.intEmail}</li>
+                <li>School:${employees.intSchool}</li>
             </ul>
         </div>
       </article>
